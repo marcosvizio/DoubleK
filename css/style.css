@@ -1,0 +1,435 @@
+/* primero hacer reset */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* agrego fuente de gooogle fonts */
+
+.gfonts {
+    font-family: 'Montserrat', sans-serif;
+}
+/* grid layout */
+
+#grid__container{
+    display: grid;
+    height: auto;
+    width: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+@media screen and (min-width:769px) {
+    #grid__container{
+        grid-template-rows: 70px auto auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    }
+}
+
+/* fin grid layout */
+
+/* diseño header y nav */
+
+@media screen and (min-width:769px) {
+    #header {
+        width: 100%;
+        background-color: bisque;
+        box-shadow: 0px 3px 10px black;
+        position: sticky;
+        top: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        grid-area: header;
+    }
+    
+    .header__logo a img {
+        height: 100px;
+        width: 150px;
+    }
+    
+    .header__nav ul{
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .header__nav ul li{
+        display: inline-block;
+    }
+    
+    .header__nav ul li a{
+        color: black;
+        border: 5px solid rgb(225, 188, 144);
+        border-radius: 10px;
+        padding: 3px;
+        margin: 0px 10px;
+    }
+    
+    .menu__btn {
+        display: none;
+    }
+    
+    .header__nav ul li a:hover{
+        background: rgb(225, 188, 144);
+    }    
+    
+}
+
+
+@media screen and (max-width:768px) {
+    #header{
+        background-color: bisque;
+        box-shadow: 0px 3px 10px black;
+        top: 0;
+        padding: 0px;
+        grid-area: header;
+    }
+    .header__logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header__logo a img{
+        height: 100px;
+        width: 150px;
+    }
+    .menu__btn{
+        display: block;
+        width: 100%;
+        background-color: rgb(225, 188, 144);
+    }
+    .header__nav{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    .header__nav ul li{
+        display: block;
+        float: none;
+        border-bottom: 1px solid white;
+        background-color: rgb(225, 188, 144);
+    }
+    .header__nav ul li a{
+        display: block;
+        color: black;
+        padding: 3px;
+        margin: 0px 10px;
+    }
+    .header__nav ul li a:hover{
+        background: bisque;
+        font-weight: bold;
+    }   
+    .menu__btn .bt-menu{
+        display: block;
+        padding: 20px;
+        background-color: rgb(225, 188, 144);
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+    .menu__btn span{
+        float: right;
+        font-size: 40px;
+    }
+}
+
+
+/* diseño main y noticias */
+
+#main{
+    background-color: rgb(225, 188, 144);
+    padding: 10px;
+    display: block;
+    grid-area: main;
+}
+
+#main h1{
+    display: block;
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 1cm;
+}
+
+#main article h4{
+    font-size: 30px;
+    border-top: 5px solid bisque;
+}
+
+.main__noticia--left{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.main__noticia--right{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+iframe{
+    border: 3px solid bisque;
+    display: block;
+    width: auto;
+    margin: 3px 3px 3px 0px;
+}
+
+.main__noticia--right .main__noticiaImg{
+    border: 3px solid bisque;
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 3px 3px 3px 0px;
+}
+
+
+@media screen and (min-width:769px) {
+    .main__noticia--left{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-bottom: 5px;
+    }
+    .main__noticia--left p{
+        width: 50%;
+        height: 50%;
+    }
+    .main__noticia--right{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-bottom: 5px;
+    }
+    .main__noticia--right p{
+        width: 50%;
+        height: 50%;
+    }
+    iframe{
+        border: 3px solid bisque;
+        display: block;
+        height: auto;
+        width: 50%;
+        margin: 3px 3px 3px 0px;
+    }
+    .main__noticia--right .main__noticiaImg{
+        border: 3px solid bisque;
+        display: block;
+        height: 50%;
+        width: 50%;
+        margin: 3px 3px 3px 0px;
+    }
+}
+
+/* diseño quienes somos */
+
+
+#main article h1{
+    display: block;
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 30px;
+}
+
+.main__somos{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    padding: 5px;
+    margin: 0px;
+    border: 3px solid bisque;
+    border-radius: 10px;
+}
+
+#main h2{
+    display: block;
+    text-align: center;
+}
+
+.main__somos div{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    
+}
+
+.main__somos img{
+    height: 100%;
+    width: 100%;
+    border: 3px solid bisque;
+}
+
+@media screen and (min-width:769px) {
+    #main article h1{
+        display: block;
+        text-align: center;
+        letter-spacing: 4px;
+        font-size: 1cm;
+    }
+    
+    .main__somos{
+        display: block;
+        text-align: center;
+        font-size: 25px;
+        padding: 5px;
+        margin: 5px;
+        border: 3px solid bisque;
+    }
+    
+    .main__somos img{
+        height: 300px;
+        width: 500px;
+        border: 5px solid bisque;
+        border-radius: 20px;
+        margin: 3px 3px 3px 0px;
+    }
+    
+    #main h2{
+        display: block;
+        text-align: start;
+        margin-left: 5px;
+        font-size: 30px;
+    }
+}
+
+
+/* diseño ser nosotros */
+
+#main .main__form section p{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#main .main__form h2{
+    display: block;
+    text-align: start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main__form--formulario{
+    border: 3px solid bisque;
+    padding: 20px;
+}
+
+.main__form--formulario legend{
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+
+.main__form--formulario label{
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-block;
+    padding-bottom: 10px;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+.main__form--formulario input{
+    margin-right: 50px;
+    border: 3px solid bisque;
+    background-color: white;
+    cursor: pointer;
+}
+
+.main__form--formulario p{
+    font-weight: bold;
+    font-size: auto;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+
+.main__form--gracias{
+    display: block;
+    margin-top: 10px;
+
+}
+
+/* diseño de redes */
+
+.main__redes p{
+    display: inline-block;
+    font-weight: bold;
+    margin: 10px 0px 10px 0px;
+    border-bottom: 5px solid bisque;
+}
+
+.main__redes a img{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+
+/* diseño pie de pagina */
+
+#footer{
+    background-color: bisque;
+    padding: 10px;
+    display: flex;
+    grid-area: footer;
+    box-shadow: 0px 3px 10px black;
+    justify-content: space-between;
+}
+
+.footer__navLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__navLeft--menu{
+    text-align: start;
+}
+
+.footer__navLeft--menu ul{
+    list-style: none;
+}
+
+.footer__navLeft--menu ul li a{
+    color: black;
+    font-size: 15px;
+}
+
+.footer__navLeft--menu ul li a:hover{
+    font-weight: bold;
+}
+
+.footer__navRight{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__navRight--redes{
+    text-align: end;
+}
+
+.footer__navRight--redes ul{
+    list-style: none;
+}
+
+.footer__navRight--redes ul li a{
+    color: black;
+    font-size: 15px;
+}
+
+.footer__navRight--redes ul li a img{
+    height: 30px;
+    width: 30px;
+}
