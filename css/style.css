@@ -52,6 +52,7 @@
         justify-content: space-around;
         align-items: center;
         grid-area: header;
+        z-index: 99999;
     }
     
     .header__logo a img {
@@ -74,6 +75,7 @@
         border-radius: 10px;
         padding: 3px;
         margin: 0px 10px;
+        font-size: 14px;
     }
     
     .menu__btn {
@@ -94,6 +96,7 @@
         top: 0;
         padding: 0px;
         grid-area: header;
+        z-index: 99999;
     }
     .header__logo{
         display: flex;
@@ -150,10 +153,10 @@
 /* diseño main y noticias */
 
 #main{
-    background-color: rgb(225, 188, 144);
     padding: 10px;
     display: block;
     grid-area: main;
+    background-image: linear-gradient(to bottom,rgb(214, 165, 104),rgb(225, 188, 144));
 }
 
 #main h1{
@@ -230,6 +233,9 @@ iframe{
         height: 50%;
         width: 50%;
         margin: 3px 3px 3px 0px;
+    }
+    .main__noticia--right .main__noticiaImg:hover{
+        transform: scale(1.5,1.5);
     }
 }
 
