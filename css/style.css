@@ -6,11 +6,16 @@
     padding: 0;
 }
 
-/* agrego fuente de gooogle fonts */
+/* agrego fuente de gooogle fonts y color de texto */
 
 .gfonts {
     font-family: 'Montserrat', sans-serif;
 }
+
+body{
+    color: black;
+}
+
 /* grid layout */
 
 #grid__container{
@@ -25,7 +30,7 @@
     "footer";
 }
 
-@media screen and (min-width:769px) {
+@media screen and (min-width:1024px) {
     #grid__container{
         grid-template-rows: 70px auto auto;
         grid-template-columns: 1fr 1fr 1fr;
@@ -40,7 +45,7 @@
 
 /* diseño header y nav */
 
-@media screen and (min-width:769px) {
+@media screen and (min-width:1024px) {
     #header {
         width: 100%;
         background-color: bisque;
@@ -55,7 +60,7 @@
         z-index: 99999;
     }
     
-    .header__logo a img {
+    .header__logo{
         height: 100px;
         width: 150px;
     }
@@ -63,6 +68,7 @@
     .header__nav ul{
         font-weight: bold;
         font-size: 15px;
+        margin: 0;
     }
     
     .header__nav ul li{
@@ -77,11 +83,6 @@
         margin: 0px 10px;
         font-size: 14px;
     }
-    
-    .menu__btn {
-        display: none;
-    }
-    
     .header__nav ul li a:hover{
         background: rgb(225, 188, 144);
     }    
@@ -89,7 +90,7 @@
 }
 
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1023px) {
     #header{
         background-color: bisque;
         box-shadow: 0px 3px 10px black;
@@ -102,15 +103,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-    .header__logo a img{
         height: 100px;
         width: 150px;
-    }
-    .menu__btn{
-        display: block;
-        width: 100%;
-        background-color: rgb(225, 188, 144);
     }
     .header__nav{
         width: 100%;
@@ -133,20 +127,6 @@
         background: bisque;
         font-weight: bold;
     }   
-    .menu__btn .bt-menu{
-        display: block;
-        padding: 20px;
-        background-color: rgb(225, 188, 144);
-        color: black;
-        font-weight: bold;
-        font-size: 15px;
-        text-decoration: none;
-        box-sizing: border-box;
-    }
-    .menu__btn span{
-        float: right;
-        font-size: 40px;
-    }
 }
 
 
@@ -164,11 +144,14 @@
     text-align: center;
     letter-spacing: 8px;
     font-size: 1cm;
+    font-weight: bold;
 }
 
 #main article h4{
     font-size: 30px;
+    font-weight: bold;
     border-top: 5px solid bisque;
+    padding-top: 10px;
 }
 
 .main__noticia--left{
@@ -190,7 +173,7 @@ iframe{
     margin: 3px 3px 3px 0px;
 }
 
-.main__noticia--right .main__noticiaImg{
+.main__noticiaImg{
     border: 3px solid bisque;
     display: block;
     height: 100%;
@@ -234,9 +217,6 @@ iframe{
         width: 50%;
         margin: 3px 3px 3px 0px;
     }
-    .main__noticia--right .main__noticiaImg:hover{
-        transform: scale(1.5,1.5);
-    }
 }
 
 /* diseño quienes somos */
@@ -262,18 +242,12 @@ iframe{
 #main h2{
     display: block;
     text-align: center;
+    font-weight: bold;
 }
 
-.main__somos div{
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-    
-}
-
-.main__somos img{
-    height: 100%;
-    width: 100%;
+.main__somosImg{
+    height: 50%;
+    width: 50%;
     border: 3px solid bisque;
 }
 
@@ -294,12 +268,17 @@ iframe{
         border: 3px solid bisque;
     }
     
-    .main__somos img{
-        height: 300px;
-        width: 500px;
-        border: 5px solid bisque;
-        border-radius: 20px;
+    .main__somosDiv{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .main__somosImg{
+        height: 50%;
+        width: 50%;
+        border: 3px solid bisque;
         margin: 3px 3px 3px 0px;
+        display: block;
     }
     
     #main h2{
@@ -329,6 +308,8 @@ iframe{
 .main__form--formulario{
     border: 3px solid bisque;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .main__form--formulario legend{
@@ -348,11 +329,12 @@ iframe{
     letter-spacing: 2px;
 }
 
-.main__form--formulario input{
-    margin-right: 50px;
+.main__form--formularioInput{
+    margin-right: 20px;
     border: 3px solid bisque;
     background-color: white;
     cursor: pointer;
+    width: 25%;
 }
 
 .main__form--formulario p{
@@ -367,6 +349,15 @@ iframe{
     display: block;
     margin-top: 10px;
 
+}
+
+@media screen and (max-width:1023px) {
+    .main__form--formulario label{
+        display: block;
+    }
+    .main__form--formularioInput{
+        width: 100%;
+    }
 }
 
 /* diseño de redes */
@@ -400,12 +391,18 @@ iframe{
     flex-direction: column;
 }
 
+.footer__navLeft h4{
+    font-weight: bold;
+}
+
 .footer__navLeft--menu{
     text-align: start;
 }
 
 .footer__navLeft--menu ul{
     list-style: none;
+    margin: 0rem;
+    padding: 0rem;
 }
 
 .footer__navLeft--menu ul li a{
@@ -422,12 +419,18 @@ iframe{
     flex-direction: column;
 }
 
+.footer__navRight h4{
+    font-weight: bold;
+}
+
 .footer__navRight--redes{
     text-align: end;
 }
 
 .footer__navRight--redes ul{
     list-style: none;
+    margin: 0rem;
+    padding: 0rem;
 }
 
 .footer__navRight--redes ul li a{
