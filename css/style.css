@@ -370,6 +370,10 @@ iframe{
     background-color: bisque;
 }
 
+.main__presentacionesTitulo{
+    display: flex;
+}
+
 
 /* ========================== REDES ========================== */
 
