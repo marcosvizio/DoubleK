@@ -1,4 +1,4 @@
-/* primero hacer reset */
+/* ============================= RESET ============================= */
 
 *{
     box-sizing: border-box;
@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-/* agrego fuente de gooogle fonts y color de texto */
+/* ========================== GOOGLE FONTS Y COLOR DE FUENTE ========================= */
 
 .gfonts {
     font-family: 'Montserrat', sans-serif;
@@ -16,7 +16,7 @@ body{
     color: black;
 }
 
-/* grid layout */
+/* ========================== LAYOUT GRIDS ========================== */
 
 #grid__container{
     display: grid;
@@ -41,9 +41,7 @@ body{
     }
 }
 
-/* fin grid layout */
-
-/* diseño header y nav */
+/* ========================== HEADER Y NAV ========================== */
 
 @media screen and (min-width:1024px) {
     #header {
@@ -130,7 +128,7 @@ body{
 }
 
 
-/* diseño main y noticias */
+/* ========================== MAIN Y INDEX ========================== */
 
 #main{
     padding: 10px;
@@ -219,7 +217,7 @@ iframe{
     }
 }
 
-/* diseño quienes somos */
+/* ========================== QUIENES SOMOS ========================== */
 
 
 #main article h1{
@@ -297,7 +295,7 @@ iframe{
 }
 
 
-/* diseño ser nosotros */
+/* ========================== SOLICITUDES ========================== */
 
 #main .main__form section p{
     display: block;
@@ -366,14 +364,14 @@ iframe{
         width: 100%;
     }
 }
-/* diseño presentaciones */
+/* ========================== PRESENTACIONES ========================== */
 
 .main__presentaciones{
     background-color: bisque;
 }
 
 
-/* diseño de redes */
+/* ========================== REDES ========================== */
 
 .main__redes{
     display: flex;
@@ -399,7 +397,20 @@ iframe{
     display: inline-block;
 }
 
-/* diseño pie de pagina */
+@media screen and (max-width: 767px) {
+    .main__redes{
+        display: flex;
+        align-items: center;
+    }
+
+    .main__redes--titulo{
+        display: block;
+        text-align: center;
+        font-size: 22px;
+    }
+}
+
+/* ========================== FOOTER ========================== */
 
 #footer{
     background-color: bisque;
