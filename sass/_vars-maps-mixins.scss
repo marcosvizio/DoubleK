@@ -1,0 +1,25 @@
+/* VARS */
+
+$textoMain: black;
+$margenSmall: 1rem 1rem 1rem 0rem;
+
+/* MAPS */
+
+$bordes: (
+    oscuros: 3px solid rgb(225, 188, 144),
+    claros: 3px solid bisque,
+    sombras: 0px 3px 10px black
+);
+$sizeLetra: (
+    titulos: 2.2rem,
+    subTitulos: 1.7rem,
+    textos: 1.2rem
+);
+
+/* MIXINS */
+
+@mixin flex-around-center{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

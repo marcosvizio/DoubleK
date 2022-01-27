@@ -59,13 +59,12 @@ body{
     }
     
     .header__logo{
-        height: 100px;
-        width: 150px;
+        width: 13vw;
     }
     
     .header__nav ul{
         font-weight: bold;
-        font-size: 15px;
+        font-size: 1.2rem;
         margin: 0;
     }
     
@@ -75,11 +74,11 @@ body{
     
     .header__nav ul li a{
         color: black;
-        border: 5px solid rgb(225, 188, 144);
+        border: 3px solid rgb(225, 188, 144);
         border-radius: 10px;
-        padding: 3px;
+        padding: 2px;
         margin: 0px 10px;
-        font-size: 14px;
+        font-size: 1.2rem;   
     }
     .header__nav ul li a:hover{
         background: rgb(225, 188, 144);
@@ -141,12 +140,12 @@ body{
     display: block;
     text-align: center;
     letter-spacing: 8px;
-    font-size: 1cm;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 #main article h4{
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: bold;
     border-top: 5px solid bisque;
     padding-top: 10px;
@@ -164,10 +163,16 @@ body{
     margin-bottom: 5px;
 }
 
+.main__noticiaVideo{
+    display: block;
+    width: 100%;
+    margin: 3px 3px 3px 0px;
+}
+
 iframe{
     border: 3px solid bisque;
     display: block;
-    width: auto;
+    width: 100%;
     margin: 3px 3px 3px 0px;
 }
 
@@ -188,27 +193,22 @@ iframe{
         margin-bottom: 5px;
     }
     .main__noticia--left p{
-        width: 50%;
-        height: 50%;
-    }
-    .main__noticia--right{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        margin-bottom: 5px;
-    }
-    .main__noticia--right p{
-        width: 50%;
-        height: 50%;
-    }
-    iframe{
-        border: 3px solid bisque;
         display: block;
-        height: auto;
+        width: 50%;
+        height: 100%;
+        font-size: 1.2rem;
+    }
+    .main__noticiaVideo{
+        display: block;
         width: 50%;
         margin: 3px 3px 3px 0px;
     }
-    .main__noticia--right .main__noticiaImg{
+    iframe{
+        border: 3px solid bisque;
+        width: 100%;
+        height: 100%;
+    }
+    .main__noticia--left .main__noticiaImg{
         border: 3px solid bisque;
         display: block;
         height: 50%;
@@ -252,13 +252,13 @@ iframe{
         display: block;
         text-align: center;
         letter-spacing: 4px;
-        font-size: 1cm;
+        font-size: 2rem;
     }
     
-    .main__somos{
+    .main__somos p{
         display: block;
         text-align: center;
-        font-size: 25px;
+        font-size: 1.5rem;
         padding: 5px;
         margin: 5px;
     }
@@ -268,9 +268,12 @@ iframe{
         border-radius: 10px;
         display: block;
         text-align: center;
-        font-size: 25px;
         padding: 5px;
         margin: 5px;
+    }
+
+    .main__somosUnidad p{
+        font-size: 1.5rem;
     }
     
     .main__somosDiv{
@@ -290,17 +293,22 @@ iframe{
         display: block;
         text-align: center;
         margin-left: 5px;
-        font-size: 30px;
+        font-size: 2rem;
     }
 }
 
 
 /* ========================== SOLICITUDES ========================== */
 
+#main .main__form h1{
+    font-size: 2rem;
+}
+
 #main .main__form section p{
     display: block;
     text-align: center;
     margin-top: 20px;
+    font-size: 1.5rem;
 }
 
 #main .main__form h2{
@@ -308,6 +316,7 @@ iframe{
     text-align: start;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-size: 2rem;
 }
 
 .main__form--formulario{
@@ -319,7 +328,7 @@ iframe{
 
 .main__form--formulario legend{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1rem;
     padding-bottom: 10px;
     letter-spacing: 2px;
     word-spacing: 5px;
@@ -327,7 +336,7 @@ iframe{
 
 .main__form--formulario label{
     font-weight: 600;
-    font-size: 15px;
+    font-size: 1rem;
     display: inline-block;
     padding-bottom: 10px;
     word-spacing: 5px;
@@ -340,11 +349,12 @@ iframe{
     background-color: white;
     cursor: pointer;
     width: 25%;
+    font-size: 1rem;
 }
 
 .main__form--formulario p{
     font-weight: bold;
-    font-size: auto;
+    font-size: 1rem;
     padding-bottom: 10px;
     letter-spacing: 2px;
     word-spacing: 5px;
@@ -354,6 +364,10 @@ iframe{
     display: block;
     margin-top: 10px;
 
+}
+
+.main__form--gracias p{
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width:1023px) {
@@ -374,6 +388,9 @@ iframe{
     display: flex;
 }
 
+.card-text{
+    font-size: 1rem;
+}
 
 /* ========================== REDES ========================== */
 
@@ -432,6 +449,7 @@ iframe{
 
 .footer__navLeft h4{
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .footer__navLeft--menu{
@@ -446,7 +464,7 @@ iframe{
 
 .footer__navLeft--menu ul li a{
     color: black;
-    font-size: 15px;
+    font-size: 1.2rem;
 }
 
 .footer__navLeft--menu ul li a:hover{
@@ -460,6 +478,7 @@ iframe{
 
 .footer__navRight h4{
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .footer__navRight--redes{
@@ -474,7 +493,7 @@ iframe{
 
 .footer__navRight--redes ul li a{
     color: black;
-    font-size: 15px;
+    font-size: 1.2rem;
 }
 
 .footer__navRight--redes ul li a img{
