@@ -313,6 +313,13 @@ body .main__gracias p {
   margin-top: 1rem;
 }
 
+body .main div .main__titulo--presentaciones {
+  border-bottom: 3px solid bisque;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+}
+
 body .main__presentaciones {
   background-color: bisque;
 }
@@ -422,6 +429,7 @@ body .footer__navRight--menuNav ul a img {
     /* HEADER */
     /* MAIN INDEX */
     /* MAIN SOLICITUDES */
+    /* MAIN PRESENTACIONES */
     /* MAIN REDES */
   }
   body #grid__container {
@@ -566,6 +574,10 @@ body .footer__navRight--menuNav ul a img {
   }
   body .main__form--formularioInput {
     width: 25%;
+  }
+  body .main div .main__titulo--presentaciones {
+    letter-spacing: 0.5rem;
+    font-size: 2.2rem;
   }
   body .main__titulo--redes {
     display: block;

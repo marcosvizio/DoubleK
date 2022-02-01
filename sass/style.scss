@@ -245,6 +245,12 @@ body{
     }
     /* MAIN PRESENTACIONES */
     .main{
+        div .main__titulo--presentaciones{
+            border-bottom: map-get($bordes,claros);
+            padding: $paddingTitulos;
+            font-size: 1.6rem;
+            letter-spacing: 0.2rem;
+        }
         &__presentaciones{
             background-color: bisque;
         }
@@ -445,6 +451,13 @@ body{
             }
             &Input{
                 width: 25%;
+            }
+        }
+        /* MAIN PRESENTACIONES */
+        .main{
+            div .main__titulo--presentaciones{
+                letter-spacing: 0.5rem;
+                font-size: map-get($sizeLetra,titulos);
             }
         }
         /* MAIN REDES */
