@@ -19,7 +19,9 @@
 /* KEYFRAMES */
 
 @keyframes animacionHeader {
-    0% {background-color: bisque}
+    0% {
+        background-color: bisque
+    }
     100% {
         background-color: rgb(225, 188, 144);
     }
@@ -98,7 +100,7 @@ body{
         padding: 10px;
         & h1{
             text-align: center;
-            letter-spacing: 1rem;
+            letter-spacing: 0.5rem;
             font-size: map-get($sizeLetra,titulos);
             font-weight: bold;
         }
@@ -139,7 +141,143 @@ body{
             }
 
         }
-    }    
+    }
+    /* MAIN QUIENES SOMOS */
+    .main__somos{
+        & h1{
+            display: block;
+            text-align: center;
+            letter-spacing: 0.5rem;
+            font-size: map-get($sizeLetra,titulos);
+            border-bottom: map-get($bordes,claros);
+            padding: $paddingTitulos;
+        }
+        & div{
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            margin: 0;
+            & p{
+                font-size: map-get($sizeLetra,textos);
+            }
+        }
+    }
+    .main__unidad--titulo{
+        display: inline-block;
+        border-bottom: map-get($bordes,claros);
+        font-weight: bold;
+    }
+    .main__unidad--articulo{
+        & p{
+            font-size: map-get($sizeLetra,textos);
+        }
+        &Div{
+            height: 100%;
+            width: 100%;
+            &Img{
+                height: auto;
+                width: 100%;
+                border: map-get($bordes,claros);
+                border-radius: 2rem;
+            }
+        }
+    }
+    /* MAIN SOLICITUDES */
+    .main__form{
+        & h1{
+            font-size: map-get($sizeLetra,titulos);
+            border-bottom: map-get($bordes,claros);
+            padding: $paddingTitulos;
+        }
+        & section{
+            & p{
+                font-size: map-get($sizeLetra,textos);
+                margin: 0;
+            }
+        }
+        & h2{
+            display: inline-block;
+            font-size: map-get($sizeLetra,subTitulos);
+            font-weight: bold;
+            border-bottom: map-get($bordes, claros);
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+        &--formulario{
+            display: flex;
+            flex-direction: column;
+            border: map-get($bordes,claros);
+            border-radius: 2rem;
+            padding: 2rem;
+            & legend{
+                font-size: map-get($sizeLetra,subTitulos);
+                font-weight: bold;
+            }
+            &Input{
+                background-color: white;
+                margin-right: 0.5rem;
+                border: map-get($bordes,claros);
+                cursor: pointer;
+                width: 100%;
+                font-size: 0.8rem;
+            }
+            &Label{
+                font-weight: bold;
+                font-size: 0.8rem;
+                margin-bottom: 1rem;
+                letter-spacing: 0.3rem;
+                word-spacing: 0.5rem;
+            }
+            & p{
+                font-weight: bold;
+                font-size: map-get($sizeLetra,textos);
+                padding-bottom: 1rem;
+                letter-spacing: 0.3rem;
+                word-spacing: 0.5rem;
+            }
+        }
+    }
+    .main__gracias{
+        & p{
+            font-size: map-get($sizeLetra,textos);
+            margin-top: 1rem;
+        }
+    }
+    /* MAIN PRESENTACIONES */
+    .main{
+        &__presentaciones{
+            background-color: bisque;
+        }
+    }
+    .card-text{
+        font-size: map-get($sizeLetra,textos);
+    }
+    /* MAIN REDES */
+    .main{
+        &__titulo--redes{
+            border-bottom: map-get($bordes,claros);
+            display: block;
+            text-align: center;
+            font-size: map-get($sizeLetra,titulos);
+            font-weight: bold;
+            padding: $paddingTitulos;
+        }
+        &__redes{
+            display: block;
+            text-align: center;
+            font-size: map-get($sizeLetra,titulos);
+            flex-direction: column;
+            & p{
+                display: inline-block;
+                font-style: bold;
+                margin: $margenSmall;
+                border-bottom: map-get($bordes,claros);
+            }
+            & a img{
+                display: inline-block;
+            }
+        }
+    }
     /* FOOTER */
     .footer{
         grid-area: footer;
@@ -171,7 +309,7 @@ body{
                 }
             }
         }
-        /* EXTEND */
+        /* FOOTER EXTEND */
         &__navRight{
             @extend .footer__navLeft;
             &--menu{
@@ -295,6 +433,32 @@ body{
                     }
                 }
             }        
+        }
+        /* MAIN SOLICITUDES */
+        .main__form--formulario{
+            &Label{
+                display: inline;
+                margin-top: 0.1rem;
+                margin-bottom: 0.8rem;
+                letter-spacing: 0.1rem;
+                word-spacing: 0.1rem;
+            }
+            &Input{
+                width: 25%;
+            }
+        }
+        /* MAIN REDES */
+        .main{
+            &__titulo--redes{
+                display: block;
+                text-align: center;
+                font-weight: bold;
+                border-bottom: map-get($bordes,claros);
+                }
+            &__redes{
+                display: flex;
+                align-items: flex-start;
+            }
         }
     }
 }
