@@ -27,6 +27,15 @@
     }
 }
 
+@keyframes animacionForm {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: bisque;
+    }
+}
+
 /* BODY */
 
 body{
@@ -220,6 +229,44 @@ body{
                 cursor: pointer;
                 width: 100%;
                 font-size: 0.8rem;
+                &Enviar{
+                    background-color: white;
+                    margin-right: 0.5rem;
+                    border: map-get($bordes,claros);
+                    border-radius: 0.5rem;
+                    cursor: pointer;
+                    font-size: 0.8rem;
+                    width: 100%;
+                    &:hover{
+                        animation-name: animacionForm;
+                            animation-duration: 600ms;
+                            animation-direction: normal;
+                            animation-timing-function: linear; 
+                            animation-iteration-count: 1;
+                            animation-delay: 0s;
+                            animation-fill-mode: forwards;
+                            font-weight: bold;
+                    }
+                }
+                &Borrar{
+                    background-color: white;
+                    margin-right: 0.5rem;
+                    border: map-get($bordes,claros);
+                    border-radius: 0.5rem;
+                    cursor: pointer;
+                    font-size: 0.8rem;
+                    width: 100%;
+                    &:hover{
+                            animation-name: animacionForm;
+                            animation-duration: 600ms;
+                            animation-direction: normal;
+                            animation-timing-function: linear; 
+                            animation-iteration-count: 1;
+                            animation-delay: 0s;
+                            animation-fill-mode: forwards;
+                            font-weight: bold;
+                    }
+                }
             }
             &Label{
                 font-weight: bold;

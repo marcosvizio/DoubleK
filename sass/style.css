@@ -33,6 +33,24 @@
   }
 }
 
+@-webkit-keyframes animacionForm {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: bisque;
+  }
+}
+
+@keyframes animacionForm {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: bisque;
+  }
+}
+
 /* BODY */
 body {
   /* COLOR DE FUENTE */
@@ -290,6 +308,62 @@ body .main__form--formularioInput {
   cursor: pointer;
   width: 100%;
   font-size: 0.8rem;
+}
+
+body .main__form--formularioInputEnviar {
+  background-color: white;
+  margin-right: 0.5rem;
+  border: 3px solid bisque;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+body .main__form--formularioInputEnviar:hover {
+  -webkit-animation-name: animacionForm;
+          animation-name: animacionForm;
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-weight: bold;
+}
+
+body .main__form--formularioInputBorrar {
+  background-color: white;
+  margin-right: 0.5rem;
+  border: 3px solid bisque;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+body .main__form--formularioInputBorrar:hover {
+  -webkit-animation-name: animacionForm;
+          animation-name: animacionForm;
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-weight: bold;
 }
 
 body .main__form--formularioLabel {
